@@ -1,6 +1,8 @@
 #!/bin/bash
-apt update -y
-apt install -y apache2
+set -e
 
-systemctl start apache2
-systemctl enable apache2
+# clean BEFORE deployment
+sudo rm -rf /var/www/html/*
+
+sudo apt update -y
+sudo apt install apache2 -y
