@@ -13,7 +13,7 @@ permissions:
     mode: 755
 
 hooks:
-  AfterInstall:
+  BeforeInstall:
     - location: scripts/install.sh
       timeout: 300
       runas: root
